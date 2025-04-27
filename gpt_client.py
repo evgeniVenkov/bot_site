@@ -9,7 +9,7 @@ api_key = os.getenv("KEY")
 sys_promt = get()
 
 class client:
-    def __init__(self,count_history = 10, model = "gpt-3.5-turbo"):
+    def __init__(self,count_history = 10, model = "gpt-3.5-turbo", limit_response = 50):
         """Инициализация API клиента и загрузка ключа"""
         self.client = openai.OpenAI(api_key=api_key)
         self.history = []
@@ -17,6 +17,7 @@ class client:
         self.first_request = True
         self.count_history = count_history
         self.model = model
+        self.limit_response = limit_response
     def chat(self, user_message):
 
         if not api_key:
@@ -38,7 +39,7 @@ class client:
                 model=self.model,
                 messages=self.history,
                 temperature=0.7,
-                max_tokens=25
+                max_tokens=self.limit_response,
             )
 
             bot_reply = response.choices[0].message.content
