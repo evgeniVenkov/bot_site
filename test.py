@@ -19,5 +19,12 @@ def task2():
             print(num)
             break
 
+def task3():
+    num = 0.00314567
+    string = str(num)
+    for i in string:
+        if i.isdigit() and int(i) != 0:
+            print("как видишь нет ошибки",i)
+            break
 
-task2()
+task3()
