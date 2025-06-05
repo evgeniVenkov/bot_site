@@ -27,4 +27,12 @@ def task3():
             print("как видишь нет ошибки",i)
             break
 
-task3()
+def task4():
+    num_rand = random.randint(1,10000)
+    num = num_rand
+
+    num_rand = num_rand % 10
+    print(num_rand)
+    print(num)
+
+task4()
