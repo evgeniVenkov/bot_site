@@ -35,4 +35,14 @@ def task4():
     print(num_rand)
     print(num)
 
-task4()
+def task6():
+    num_rand = random.randint(1,10000)
+    right_num = num_rand % 10
+    left_num = int(str(num_rand)[0])
+
+    print(left_num)
+    print(right_num)
+    print(num_rand)
+    print(left_num+right_num)
+
+task6()
