@@ -45,4 +45,9 @@ def task6():
     print(num_rand)
     print(left_num+right_num)
 
-task6()
+def task7():
+    mass = [1,-2,3,4,-5,6,7,-8,9,10,-11,12,13,14,15]
+    new_mass = [i for i in mass if i < 0]
+    print(len(new_mass))
+
+task7()
