@@ -134,4 +134,11 @@ def task10():
                 count += int(j)
     print(count)
 
-task10()
+def task11():
+    for i in range(10, 1000):
+        st = str(i)
+        num = int(st[-2])
+        if num % 2 == 0:
+            print(i)
+
+task11()
