@@ -79,7 +79,7 @@ def task9():
                 text4
                 text5
             '''
-    mass= []
+    mass = []
     for el in text.split('\n'):
         el = el.strip()
         if not el:
@@ -87,6 +87,7 @@ def task9():
         mass.append(el)
 
     print(mass)
+
 
 def task10():
     dct = {
@@ -134,6 +135,7 @@ def task10():
                 count += int(j)
     print(count)
 
+
 def task11():
     for i in range(10, 1000):
         st = str(i)
@@ -141,4 +143,17 @@ def task11():
         if num % 2 == 0:
             print(i)
 
-task11()
+
+def task12():
+    mass = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ]
+    for m in mass:
+        for el in m:
+            print(el)
+    print("---------------------")
+    for el in [item for sub in mass for item in sub]:
+        print(el)
+task12()
