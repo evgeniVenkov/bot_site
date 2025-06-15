@@ -156,4 +156,32 @@ def task12():
     print("---------------------")
     for el in [item for sub in mass for item in sub]:
         print(el)
-task12()
+
+
+def task13():
+    lst = [
+        {
+            1: 11,
+            2: 12,
+            3: 13,
+        },
+        {
+            1: 21,
+            2: 22,
+            3: 23,
+        },
+        {
+            1: 24,
+            2: 25,
+            3: 26,
+        },
+    ]
+    # count = 0
+    # for el in lst:
+    #     for i in el.values():
+    #         count += int(i)
+    count = sum(el for dict in lst for el in dict.values())
+    print(count)
+
+
+task13()
