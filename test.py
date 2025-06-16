@@ -183,5 +183,16 @@ def task13():
     count = sum(el for dict in lst for el in dict.values())
     print(count)
 
+def task14():
+    lst = [47, 80, 13, 5, 91, 36, 64, 78, 20, 509, 26, 88, 31, 707, 19, 95, 43, 11, 69, 54]
+    new_mas = []
+    # for el in lst:
+    #     for i in str(el):
+    #         if i == "0":
+    #             new_mas.append(el)
+    #             break
+    nem_mass = [el for el in lst for i in str(el) if i == "0"]
+    print(nem_mass)
 
-task13()
+
+task14()
