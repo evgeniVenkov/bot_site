@@ -204,5 +204,15 @@ def task15():
     ]
     st = "\n".join(lst)
     print(st)
+def task16():
+    mass = []
+    for i in range(3):
+        ms =[]
+        for e in range(3):
+            ms.append("x")
+        mass.append(ms)
+    print(mass)
 
-task15()
+
+
+task16()
