@@ -194,5 +194,15 @@ def task14():
     nem_mass = [el for el in lst for i in str(el) if i == "0"]
     print(nem_mass)
 
+def task15():
+    lst= [
+        'text1',
+        'text2',
+        'text3',
+        'text4',
+        'text5',
+    ]
+    st = "\n".join(lst)
+    print(st)
 
-task14()
+task15()
