@@ -183,6 +183,7 @@ def task13():
     count = sum(el for dict in lst for el in dict.values())
     print(count)
 
+
 def task14():
     lst = [47, 80, 13, 5, 91, 36, 64, 78, 20, 509, 26, 88, 31, 707, 19, 95, 43, 11, 69, 54]
     new_mas = []
@@ -194,8 +195,9 @@ def task14():
     nem_mass = [el for el in lst for i in str(el) if i == "0"]
     print(nem_mass)
 
+
 def task15():
-    lst= [
+    lst = [
         'text1',
         'text2',
         'text3',
@@ -204,15 +206,38 @@ def task15():
     ]
     st = "\n".join(lst)
     print(st)
+
+
 def task16():
     mass = []
     for i in range(3):
-        ms =[]
+        ms = []
         for e in range(3):
             ms.append("x")
         mass.append(ms)
     print(mass)
 
 
+def task17():
+    text = '''
+            text1
+            text2
+            
+            text3
+            text4
+            
+            text5
+        '''
+    mass_text = text.splitlines()
+    # mass = []
+    # for el in mass_text:
+    #     if not el or el == '\t':
+    #         continue
+    #     mass.append(el)
+    mass = [el for el in mass_text if not el or el != '\t']
+    new_text = '\n'.join(mass)
 
-task16()
+    print(new_text)
+
+
+task17()
