@@ -215,6 +215,7 @@ def task16():
         for e in range(3):
             ms.append("x")
         mass.append(ms)
+    
     print(mass)
 
 
@@ -239,5 +240,24 @@ def task17():
 
     print(new_text)
 
+
+def filter_unique_words(answer_list: str) -> str:
+    counts = {}
+    mass = answer_list.split(' ')
+    for word in mass:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+
+    uniq_w = [word for word in mass if counts[word] == 1]
+    if len(uniq_w) == 0:
+        return -1
+    return " ".join(uniq_w)
+
+
+answer_list = input()
+unique_words = filter_unique_words(answer_list)
+print(unique_words)
 
 task17()
