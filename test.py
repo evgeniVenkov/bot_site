@@ -215,7 +215,7 @@ def task16():
         for e in range(3):
             ms.append("x")
         mass.append(ms)
-    
+
     print(mass)
 
 
@@ -256,8 +256,21 @@ def filter_unique_words(answer_list: str) -> str:
     return " ".join(uniq_w)
 
 
-answer_list = input()
-unique_words = filter_unique_words(answer_list)
-print(unique_words)
-
-task17()
+def task18():
+    st = '''
+            a-1
+            b-2
+            c-3
+            d-4
+            e-5
+        '''
+    last_char = ''
+    dit = {}
+    for el in st:
+        if el.isalpha():
+            last_char = el
+            continue
+        if el.isdigit():
+            dit.update({last_char: el})
+    print(dit)
+task18()
