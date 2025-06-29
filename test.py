@@ -273,4 +273,19 @@ def task18():
         if el.isdigit():
             dit.update({last_char: el})
     print(dit)
-task18()
+
+
+def task19():
+    ms = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ]
+    # m =[]
+    # for el in ms:
+    #     for i in el:
+    #         m.append(i)
+    m = [i for el in ms for i in el]
+    print(m)
+
+task19()
