@@ -288,4 +288,15 @@ def task19():
     m = [i for el in ms for i in el]
     print(m)
 
-task19()
+
+def task20():
+    m = [
+        [2, 1, 4, 3, 5],
+        [3, 5, 2, 4, 1],
+        [4, 3, 1, 5, 2],
+    ]
+    ms = [sorted(el) for el in m]
+    print(ms)
+
+
+task20()
