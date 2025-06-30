@@ -299,4 +299,11 @@ def task20():
     print(ms)
 
 
-task20()
+from datetime import datetime
+
+
+def task21():
+    print(str(datetime.now()).split(' ')[0])
+
+
+task21()
