@@ -305,5 +305,25 @@ from datetime import datetime
 def task21():
     print(str(datetime.now()).split(' ')[0])
 
+class book():
+    def __init__(self,title,author,pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+        self.current_page = 1
 
-task21()
+    def read(self, pages):
+        self.current_page += pages
+        if self.current_page > self.pages:
+            self.current_page = self.pages
+
+    def bookmark(self):
+        return self.current_page
+    def info(self):
+        print(f"Книга {self.title} автора {self.author}, всего страниц:{self.pages}, текущая страница: {self.current_page}")
+
+book_one = book("Война и мир", "Толстой", 1225)
+book_one.read(30)
+print(f"читаю на {book_one.bookmark()}")
+book_one.info()
+
